@@ -2,7 +2,6 @@ package StudiKasus;
 
 import StudiKasus.Karyawan.*;
 
-import java.util.List;
 import java.util.Scanner;
 
 import StudiKasus.Hewan.*;
@@ -61,6 +60,6 @@ public class PetShop {
                 System.out.println(enumList[i]);
             }
         }
-
+        sc.close();
     }
 }
