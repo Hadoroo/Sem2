@@ -1,0 +1,19 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "PBO/Praktikoom",
+        "PBO/Coolyeah/Pegawai",
+        "PBO/Coolyeah/Introduction",
+        "PBO/Coolyeah/Abstract Class",
+        "PBO/Coolyeah",
+        "ASD/Praktikoom",
+        "ASD/Coolyeah",
+        "JOKI"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
+}
