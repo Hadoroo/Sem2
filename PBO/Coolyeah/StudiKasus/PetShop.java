@@ -60,6 +60,5 @@ public class PetShop {
                 System.out.println(enumList[i]);
             }
         }
-        sc.close();
     }
 }
