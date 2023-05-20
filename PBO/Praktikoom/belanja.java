@@ -58,15 +58,16 @@ class Employee implements Payable{
         System.out.println("========================================================");
         System.out.println("\t\t    DATA KARYAWAN");
         System.out.println("========================================================");
-        System.out.println("Nama\t\t: " + name);
-        System.out.println("Nomor Registrasi: " + regNum);
-        System.out.println("Gaji\t\t: Rp." + decimalFormat.format(salary));
+        System.out.println("Nama\t\t\t: " + name);
+        System.out.println("Nomor Registrasi'\t: " + regNum);
+        System.out.println("Gaji\t\t\t: Rp." + decimalFormat.format(salary));
         System.out.println();
         System.out.println("========================================================");
         System.out.println("Nama Barang\tHarga Per Barang\tBanyak Pembelian");
+        System.out.println("========================================================");
         for (int i = 0; i < invoices.length; i++){
             if (invoices[i] != null){
-                System.out.println(invoices[i].prodName + "\t\t" + invoices[i].quantity + "\t\t\tRp." + decimalFormat.format(invoices[i].price));
+                System.out.println(invoices[i].prodName + "\t\tRp." + decimalFormat.format(invoices[i].price) + "\t\t\t" + invoices[i].quantity);
 
             }
         }
