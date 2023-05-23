@@ -8,7 +8,8 @@
         "PBO/Coolyeah",
         "ASD/Praktikoom",
         "ASD/Coolyeah",
-        "JOKI"
+        "JOKI",
+        "ASD\\Tree"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
