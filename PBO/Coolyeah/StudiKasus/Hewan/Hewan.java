@@ -42,7 +42,7 @@ public class Hewan {
         }
     }
 
-    public String getPerawatan(){
+    public static String getPerawatan(){
         switch (jenisPerawatan){
             case SUNTIK_VAKSIN: return "Suntik Vaksin";
             case SUNTIK_ANTI_KUTU: return "Suntik Anti Kutu";

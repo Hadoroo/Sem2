@@ -433,6 +433,7 @@ class Helper {
     // Helper function to authentication
     // PS: Doing an iteration to check one by one admin instances
     static boolean authentication(String username, String password) {
+        if (username = getUser)
         return false;
     }
 
@@ -655,6 +656,18 @@ class Cengkeh extends Tanaman implements Treatment{
         return "";
     }
 
+    @Override
+    public void addResources(int resource) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addResources'");
+    }
+
+    @Override
+    public void reduceDrugDUration() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reduceDrugDUration'");
+    }
+
     // P.S: As per description at docs, if this instances not in state of "Pesticide", the price of 
     // crops will drop randomly. Bonus challenge if you can define the method
     // For easy solustion, maybe you can try use random function in java
@@ -760,6 +773,18 @@ class KepalaSawit extends Tanaman implements Treatment{
         // Code here
         return "";
     }
+
+    @Override
+    public void addResources(int resource) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addResources'");
+    }
+
+    @Override
+    public void reduceDrugDUration() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reduceDrugDUration'");
+    }
 }
 ///
 
@@ -849,7 +874,7 @@ abstract class Hewan implements Buyable{
     public abstract double dailyProfit();
 }
 
-public class Ayam extends Hewan implements TreatmentInterface {
+class Ayam extends Hewan implements Treatment {
     private int eggPerDay; // Telur yang dihasilkan oleh satu ayam
     private double eggPrice; // Harga satu butir telur
     private Medicine medicine;
@@ -959,6 +984,12 @@ public class Ayam extends Hewan implements TreatmentInterface {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'addResources'");
     }
+
+    @Override
+    public void reduceDrugDUration() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reduceDrugDUration'");
+    }
 }
 
 class Domba extends Hewan implements Treatment {
@@ -1020,6 +1051,24 @@ class Domba extends Hewan implements Treatment {
     @Override public String toString(){
         // Code here
         return "";
+    }
+
+    @Override
+    public void addResources(int resource) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addResources'");
+    }
+
+    @Override
+    public void treatment(Medicine medicine) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'treatment'");
+    }
+
+    @Override
+    public void reduceDrugDUration() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reduceDrugDUration'");
     }
 }
 
@@ -1120,6 +1169,18 @@ class Sapi extends Hewan implements Treatment{
     @Override public String toString(){
         // Code Here
         return "";
+    }
+
+    @Override
+    public void addResources(int resource) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addResources'");
+    }
+
+    @Override
+    public void reduceDrugDUration() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reduceDrugDUration'");
     }
 }
 ///

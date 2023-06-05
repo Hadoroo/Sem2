@@ -258,11 +258,16 @@ public class Balls{
         System.out.println();
 
         System.out.println("d. Ingin diketahui apakah pemain di Tim A ada yang mempunyai tinggi badan atau berat badan yang sama dengan pemain di Tim B?");
-
+        System.out.println("Tim A\t\tTim B");
         
-        for (Pemain a: timA){
-            if (binarySearch(TimB, a.tinggi, "tinggi") || binarySearch(TimB, a.berat, "berat")) {
-                System.out.println(a.tinggi + ", " + a.berat);
+        for(Pemain a: timA){
+            for(Pemain b: timB){
+                if (a.tinggi.equals(b.tinggi)){
+                    System.out.println("\033[4m" + a.tinggi + "\033[0m" + ", " + a.berat + "\t\t" + "\033[4m" + b.tinggi + "\033[0m" + ", " + b.berat);
+                }
+                if (a.berat.equals(b.berat)){
+                    System.out.println(a.tinggi + ", " + "\033[4m" + a.berat + "\033[0m" + "\t\t" + b.tinggi + ", " + "\033[4m" + b.berat  + "\033[0m");
+                }
             }
         }
     }

@@ -4,6 +4,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
 
 import java.awt.*;
+import java.awt.event.*;
 
 
 public class Gui extends JFrame{
@@ -102,6 +103,20 @@ public class Gui extends JFrame{
         gbc.gridy = 0;
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.NONE;
+
+        simpan.addActionListener(satuanPilih);
+
+        simpan.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String kode = kodeText.getText();
+                String satuan = satuanPilih.getSelectedItem().toString();
+                String harga = kode + " " + satuan;
+
+                // panel1.setVisible(false);
+                hargaBeli.setText(harga);
+            }
+        });
+
         panel2.add(simpan, gbc);
 
         JButton hapus = new JButton("Hapus");
@@ -124,6 +139,24 @@ public class Gui extends JFrame{
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.NONE;
         gbc.insets = new Insets(5, 50, 5, 5);
+
+        batal.addActionListener(satuanPilih);
+
+        batal.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String kode = kodeText.getText();
+                String satuan = satuanPilih.getSelectedItem().toString();
+                String harga = kode + " " + satuan;
+
+                panel1.setVisible(false);
+                hargaBeli.setText(harga);
+            }
+        });
+
+        panel2.add(keluar, gbc);
+
+        
+        
         panel2.add(keluar, gbc);
 
         setLayout(new FlowLayout());
