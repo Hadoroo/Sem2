@@ -16,7 +16,6 @@ public class Hewan {
     private String speciesHewan;
     private JenisPerawatan jenisPerawatan;
     private String karyawan;
-
     public static ArrayList <Hewan> daftarHewan = new ArrayList<Hewan>();
 
     public int getHargaPerawatan(){
@@ -42,7 +41,7 @@ public class Hewan {
         }
     }
 
-    public static String getPerawatan(){
+    public String getPerawatan(){
         switch (jenisPerawatan){
             case SUNTIK_VAKSIN: return "Suntik Vaksin";
             case SUNTIK_ANTI_KUTU: return "Suntik Anti Kutu";
