@@ -322,6 +322,11 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButton2.setText("Selesai");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Keluar");
 
@@ -802,7 +807,24 @@ public class NewJFrame extends javax.swing.JFrame {
         // System.out.println(tanggalLahir);
         // System.out.println(species);
         // System.out.println(ras);
-    }                                        
+    }
+    
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        setBounds(0, 0, 420, 400);
+        if (jCheckBox1.isSelected()) jenisPerawatan.add(jCheckBox1.getText());
+        if (jCheckBox2.isSelected()) jenisPerawatan.add(jCheckBox2.getText());
+        if (jCheckBox3.isSelected()) jenisPerawatan.add(jCheckBox3.getText());
+        if (jCheckBox4.isSelected()) jenisPerawatan.add(jCheckBox4.getText());
+        if (jCheckBox5.isSelected()) jenisPerawatan.add(jCheckBox5.getText());
+        if (jCheckBox6.isSelected()) jenisPerawatan.add(jCheckBox6.getText());
+        jPanel4.setVisible(false);
+            // MainMenu mainMenu = new MainMenu();
+            // mainMenu.setVisible(true);
+            NewJFrame jf = new NewJFrame();
+            jf.setVisible(true);
+            this.setVisible(false);
+    }
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
@@ -823,15 +845,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel1.setVisible(true);
         jPanel4.setVisible(false);
         jPanel3.setVisible(false);
-        ArrayList<String> jenisPerawatan = new ArrayList<>();
-        if (jCheckBox1.isSelected()) jenisPerawatan.add(jCheckBox1.getText());
-        if (jCheckBox2.isSelected()) jenisPerawatan.add(jCheckBox2.getText());
-        if (jCheckBox3.isSelected()) jenisPerawatan.add(jCheckBox3.getText());
-        if (jCheckBox4.isSelected()) jenisPerawatan.add(jCheckBox4.getText());
-        if (jCheckBox5.isSelected()) jenisPerawatan.add(jCheckBox5.getText());
-        if (jCheckBox6.isSelected()) jenisPerawatan.add(jCheckBox6.getText());
-        for (String lol : jenisPerawatan) {
-            System.out.println(lol);
+        jenisPerawatan.removeAll(jenisPerawatan);
+        for (String s : jenisPerawatan) {
+            System.out.println(s);
         }
     }                                        
 
@@ -910,7 +926,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel1.setVisible(true);
         jPanel7.setVisible(false);
         jPanel8.setVisible(false);
-    }                                         
+    }
+    
+    public ArrayList<String> jenisPerawatan = new ArrayList<>();
 
     /**
      * @param args the command line arguments
@@ -921,6 +939,9 @@ public class NewJFrame extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+
+        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

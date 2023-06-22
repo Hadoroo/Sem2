@@ -1,5 +1,7 @@
 package StudiKasus.PetShopUI;
 
+import java.util.Arrays;
+
 import javax.swing.JFrame;
 
 public class Login extends javax.swing.JFrame {
@@ -119,9 +121,18 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        jPanel1.setVisible(false);
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.setVisible(true);
+        String username = jTextField1.getText();
+        String password = jPasswordField1.getText();
+
+        if (username.equals("123") && password.equals("123")) {
+            jPanel1.setVisible(false);
+            // MainMenu mainMenu = new MainMenu();
+            // mainMenu.setVisible(true);
+            NewJFrame jf = new NewJFrame();
+            jf.setVisible(true);
+            this.setVisible(false);
+        }
+
     }                                        
 
     /**
